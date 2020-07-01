@@ -1,4 +1,4 @@
-FROM timii/lxde
+FROM timiil/lxde
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
