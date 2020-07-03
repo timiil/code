@@ -7,4 +7,10 @@ RUN apt-get update -y && \
     sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' && \
     apt-get install apt-transport-https -y && apt-get remove -y lightdm && apt-get update -y && apt-get install -y git code
     
-RUN code --install-extension eamodio.gitlens --user-data-dir /home
+RUN code --install-extension eamodio.gitlens --user-data-dir /home && \
+    code --install-extension vscode-icons-team.vscode-icons --user-data-dir /home && \
+    code --install-extension yzhang.markdown-all-in-one --user-data-dir /home && \
+    code --install-extension jebbs.plantuml --user-data-dir /home && \
+    code --install-extension gruntfuggly.todo-tree --user-data-dir /home && \
+    code --install-extension ritwickdey.liveserver --user-data-dir /home 
+    
